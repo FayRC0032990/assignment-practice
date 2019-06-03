@@ -19,7 +19,7 @@ namespace assignment_practice
 
         private void button1_Click(object sender, EventArgs e)
         {
-            // Calculates the area of a rectangle
+            // Calculates the area of a rectangle with error message if unexpected input
             try
             {
                 double width, height, area;
@@ -30,13 +30,13 @@ namespace assignment_practice
             }
             catch
             {
-                MessageBox.Show("Type in two numbers to get a proper answer");
+                MessageBox.Show("Type in two numbers to get an answer");
             }
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            // Calculates the area of a triangle
+            // Calculates the area of a triangle with error message if unexpected input
             try
             {
                 double Base, height, area;
@@ -47,17 +47,23 @@ namespace assignment_practice
             }
             catch
             {
-                MessageBox.Show("Type in two numbers to get a logical answer");
+                MessageBox.Show("Type in two numbers to get an answer");
             }
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            // Calculates the area of a circle
+            // Calculates the area of a circle with error message if unexpected input
             try
             {
                 double radius, area;
-
+                radius = Convert.ToDouble(textBox5.Text);
+                area = radius * radius * Math.PI;
+                label8.Text = "Area=" + area;
+            }
+            catch
+            {
+                MessageBox.Show("Type in two numbers to get an answer");
             }
         }
     }
